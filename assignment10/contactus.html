@@ -14,13 +14,34 @@
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	
+	<style>
+			.ui-controlgroup-vertical {
+			  width: 150px;
+			}
+			.ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+			.ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+			  text-align: center;
+			}
+			#car-type-button {
+			  width: 120px;
+			}
+			.ui-controlgroup-horizontal .ui-spinner-input {
+			  width: 20px;
+			}
+	</style>
+
 	<script>
-		$(document).ready(function(){
-			$('#responsive-menu').mobileMenu();
-			$(document).tooltip();
-		});
+			$(document).ready(function(){
+				$('#responsive-menu').mobileMenu();
+				$(document).tooltip();
+				$( ".controlgroup" ).controlgroup();
+				$( ".controlgroup-vertical" ).controlgroup({
+					"direction": "vertical"
+				});
+			});
 	</script>
 </head>
 <body>
@@ -58,13 +79,14 @@
 			    Email:
 				<input type="email" name="email" maxlength="30" required="">
 			   
+				<div class="controlgroup-vertical">
                 What VectaCorp products are you interested in?<br>
 			    <label for="vProspect"><input type="checkbox" name="product" value="vProspect" id="vProspect">vProspect 2.0</label>
 			    <label for="vConvert"><input type="checkbox" name="product" value="vConvert" id="vConvert">vConvert 2.0</label>
 			    <label for="vRetain"><input type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>
-			    
+			   
 			    <br>
-			    What is your current infrastructure?<br>
+				What is your current infrastructure?<br>
 			    <label for="Mac"><input type="radio" name="infrastructure" value="Mac" id="Mac">Mac</label>
 			    <label for="Linux"><input type="radio" name="infrastructure" value="Linux" id="Linux">Linux</label>
 			    <label for="Unix"><input type="radio" name="infrastructure" value="Unix" id="Unix">Unix</label>
@@ -93,6 +115,7 @@
 			    <input type="submit" name="submit" value="Submit Now">
 		    	</fieldset>
 			</form>
+		</div>
 	    </section>
 		
 		<section id="testimonials" class="five columns">
