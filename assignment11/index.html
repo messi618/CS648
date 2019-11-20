@@ -14,14 +14,21 @@
            div.row:nth-of-type(2) {padding: 15px;}
            footer {background-color: lightgray ;}
            button {margin: 15px;}
+           navbar {float: left;}
+           #container-carousel {
+            margin-top: -120px;
+        }
+        
+
+
            
         </style>
 </head>
 <body>
     
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><img class="img-fluid" src="images/logo.png" alt="logo"></a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark mt-3 ml-3 mr-3">
+            <a class="navbar-brand" href="#"><img class="img-fluid rounded logonav" src="images/logo.png" alt="logo" width="130" height="40"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -64,8 +71,8 @@
 
 
     <!-- CAROUSEL -->
-    <div class="row">
-            <div id="container" class="container-fluid col-12" style="padding: 0%;">
+        <div class="row">
+            <div id="container-carousel" class="container-fluid col-12" style="padding: 0%;">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
